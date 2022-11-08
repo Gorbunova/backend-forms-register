@@ -1,0 +1,113 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${lang}" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>docuForce</title>
+  <link rel="shortcut icon" th:href="@{/assets/register_email_phone_cert/favicon.ico}" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" media="screen" th:href="@{/assets/register_email_phone_cert/css/main.css}">
+</head>
+<body>
+<div class="layout">
+  <img th:src="@{/assets/register_email_phone_cert/img/logo.svg}" class="logo" alt="docuForce">
+
+  <form method="post" th:action="" th:object="">
+    <div class="steps_wrapper">
+      <div class="step_wrapper step_active step_passed">
+        <div class="step_description" th:utext="#{label.form.step.phone}">Phone</div>
+      </div>
+      <div class="step_wrapper step_active">
+        <div class="step_description" th:utext="#{label.form.step.certificate}">Certificate</div>
+      </div>
+      <div class="step_wrapper">
+        <div class="step_description" th:utext="#{label.form.step.password}">Password</div>
+      </div>
+    </div>
+
+    <div class="info_wrapper">
+
+      <div class="element user_name">
+        <div class="user_name_surname">
+          <p>Surname</p>
+          <p>Name</p>
+        </div>
+        <p>Patronymic</p>
+      </div>
+
+      <div class="element user_email_phone">
+        <p>email@example.com</p>
+      </div>
+
+      <div class="element user_email_phone">
+        <p>+7 (922) 431-23-45</p>
+      </div>
+
+      <div class="element user_org">
+        <p>ООО «Документационная логистика»</p>
+      </div>
+    </div>
+
+    <p class="cert_message" th:utext="#{label.form.cert.message}">To confirm the issuance of an unqualified electronic signature certificate, enter the last 3 digits of the TIN or SNILS or passport number</p>
+
+    <div class="alert_wrapper">
+      <p class="alert alert_error" th:utext="#{label.form.alert.incorrect.certcode}">Activation code entered incorrectly</p>
+    </div>
+
+    <div class="certificate_wrapper">
+      <div class="certificate_inner">
+        <div class="header">
+          <p class="title" th:utext="#{label.form.step.certificate}">Certificate</p>
+          <p class="subtitle" th:utext="#{label.form.cert.subheader}">For electronic signature</p>
+        </div>
+
+        <div class="certificate_info">
+          <div class="user_additional_info">
+            <div class="info_item">
+              <label>Email</label>
+              <p class="value email">longnameuser@mailfilebox.ru</p>
+            </div>
+            <div class="info_item">
+              <label th:utext="#{label.form.account.inn}">TIN</label>
+              <p class="value hidden">12343252</p>
+            </div>
+            <div class="info_item">
+              <label th:utext="#{label.form.account.snils}">SNILS</label>
+              <p class="value hidden">123-123-12</p>
+            </div>
+            <div class="info_item">
+              <label th:utext="#{label.form.account.passport}">Passport</label>
+              <p class="value hidden">1234 325</p>
+            </div>
+
+            <div class="info_item info_item_code">
+              <label th:utext="#{label.form.three.digits}">3 last digits</label>
+              <div class="input_wrapper input_numbers">
+                <div class="activation_code_wrapper">
+                  <div class="input_wrapper code">
+                    <div class="element_wrapper">
+                      <input name="code" id="code" th:field="*{code}" class="element"/>
+                      <span class="element_wrapper_icon">
+                          <svg width="12" height="12" class="icon_lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 14">
+                            <path
+                                d="M3.182 6.364v-1.91A2.55 2.55 0 015.727 1.91a2.55 2.55 0 012.546 2.546v1.909H3.182zm8.272.954a.955.955 0 00-.954-.954h-.318v-1.91C10.182 2.01 8.173 0 5.727 0S1.273 2.009 1.273 4.455v1.909H.955A.955.955 0 000 7.318v5.727c0 .527.428.955.955.955H10.5a.955.955 0 00.954-.955V7.318z"></path>
+                          </svg>
+                        </span>
+                    </div>
+                  </div>
+                  <img src="../static/assets/certificate-3digits/img/cert.svg" class="cert_icon" alt="certificate">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button_wrapper">
+      <button type="submit" class="button_submit button_cert" th:utext="#{label.form.confirm.cert}">Confirm certificate issue</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

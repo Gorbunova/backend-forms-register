@@ -1,0 +1,85 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${lang}" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>docuForce</title>
+  <link rel="shortcut icon" th:href="@{/assets/register_email_cert/favicon.ico}" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" media="screen" th:href="@{/assets/register_email_cert/css/main.css}">
+</head>
+<body>
+<div class="layout">
+  <img th:src="@{/assets/register_email_cert/img/logo.svg}" class="logo" alt="docuForce">
+
+  <form method="post" th:action="" th:object="">
+    <div class="steps_wrapper">
+      <div class="step_wrapper step_active step_passed">
+        <div class="step_description" th:utext="#{label.form.step.certificate}">Certificate</div>
+      </div>
+      <div class="step_wrapper step_active">
+        <div class="step_description" th:utext="#{label.form.step.password}">Password</div>
+      </div>
+    </div>
+
+    <div class="info_wrapper">
+
+      <div class="element user_name">
+        <div class="user_name_surname">
+          <p>Surname</p>
+          <p>Name</p>
+        </div>
+        <p>Patronymic</p>
+      </div>
+
+      <div class="element user_email_phone">
+        <p>email@example.com</p>
+      </div>
+
+      <div class="element user_org">
+        <p>ООО «Документационная логистика»</p>
+      </div>
+    </div>
+
+    <div class="alert_wrapper">
+      <p class="alert alert_error" th:utext="#{label.form.alert.passwords}">Passwords do not match</p>
+    </div>
+
+    <div class="input_wrapper">
+      <label for="password_first" class="label" th:utext="#{label.form.enter.password}">Enter the password</label>
+      <div class="element_wrapper"> <!-- element_wrapper_error - добавить класс при наличии ошибки в input, подсветка красным -->
+        <!-- Когда пользователь начинает вводить в input, подсветка пропадает -->
+        <input name="password_first" id="password_first" th:field="*{password1}" type="password" class="element" oninput="handleChangePassword()"/>
+        <span class="element_wrapper_icon">
+            <svg width="12" height="12" class="icon_lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 14">
+              <path
+                  d="M3.182 6.364v-1.91A2.55 2.55 0 015.727 1.91a2.55 2.55 0 012.546 2.546v1.909H3.182zm8.272.954a.955.955 0 00-.954-.954h-.318v-1.91C10.182 2.01 8.173 0 5.727 0S1.273 2.009 1.273 4.455v1.909H.955A.955.955 0 000 7.318v5.727c0 .527.428.955.955.955H10.5a.955.955 0 00.954-.955V7.318z"></path>
+            </svg>
+          </span>
+      </div>
+    </div>
+
+    <div class="input_wrapper">
+      <label for="password_second" class="label" th:utext="#{label.form.confirm.password}">Confirm the password</label>
+      <div class="element_wrapper"> <!-- element_wrapper_error - добавить класс при наличии ошибки в input, подсветка красным -->
+        <!-- Когда пользователь начинает вводить в input, подсветка пропадает -->
+        <input name="password_second" id="password_second" th:field="*{password2}" type="password" class="element" oninput="handleChangePassword()"/>
+        <span class="element_wrapper_icon">
+            <svg width="12" height="12" class="icon_lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 14">
+              <path
+                  d="M3.182 6.364v-1.91A2.55 2.55 0 015.727 1.91a2.55 2.55 0 012.546 2.546v1.909H3.182zm8.272.954a.955.955 0 00-.954-.954h-.318v-1.91C10.182 2.01 8.173 0 5.727 0S1.273 2.009 1.273 4.455v1.909H.955A.955.955 0 000 7.318v5.727c0 .527.428.955.955.955H10.5a.955.955 0 00.954-.955V7.318z"></path>
+            </svg>
+          </span>
+      </div>
+    </div>
+
+
+    <div class="button_wrapper">
+      <button type="submit" class="button_submit" th:utext="#{label.form.set.password}">Set password</button>
+    </div>
+  </form>
+</div>
+
+<script th:src="@{/assets/register_email_cert/js/main.js}"></script>
+
+</body>
+</html>

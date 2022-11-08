@@ -1,0 +1,60 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${lang}" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>docuForce</title>
+  <link rel="shortcut icon" th:href="@{/assets/register_email_phone/favicon.ico}" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" media="screen" th:href="@{/assets/register_email_phone/css/main.css}">
+</head>
+<body>
+<div class="layout">
+  <img th:src="@{/assets/register_email_phone/img/logo.svg}" class="logo" alt="docuForce">
+
+  <form class="wrapper" method="post" th:action="" th:object="">
+    <div class="steps_wrapper">
+      <div class="step_wrapper step_active step_passed">
+        <div class="step_description" th:utext="#{label.form.step.phone}">Phone</div>
+      </div>
+      <div class="step_wrapper step_active step_passed">
+        <div class="step_description" th:utext="#{label.form.step.password}">Password</div>
+      </div>
+    </div>
+
+    <div class="info_wrapper">
+
+      <div class="element user_name">
+        <div class="user_name_surname">
+          <p>Surname</p>
+          <p>Name</p>
+        </div>
+        <p>Patronymic</p>
+      </div>
+
+      <div class="element user_email_phone">
+        <p>email@example.com</p>
+      </div>
+
+      <div class="element user_email_phone">
+        <p>+7 (922) 431-23-45</p>
+      </div>
+
+      <div class="element user_org">
+        <p>ООО «Документационная логистика»</p>
+      </div>
+    </div>
+
+    <div class="alert_wrapper">
+      <p class="alert alert_success" th:utext="#{label.form.account.activated}">Аccount activated</p>
+    </div>
+
+    <p class="success_message" th:utext="#{label.form.register.success}">You have successfully registered in the system.</p>
+
+    <div class="button_wrapper">
+      <button type="submit" class="button_submit button_get_code" th:utext="#{label.form.sign.in}">Sign in</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
