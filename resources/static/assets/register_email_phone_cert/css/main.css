@@ -35,8 +35,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  /* src: url('/assets/certificate-3digits/fonts/proximanova/ProximaNova-Regular.woff2') format('woff2'); */
-  src: url('../fonts/proximanova/ProximaNova-Regular.woff2') format('woff2');
+  src: url('/assets/register_email_phone_cert/fonts/proximanova/ProximaNova-Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -44,8 +43,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  /* src: url('/assets/certificate-3digits/fonts/proximanova/ProximaNova-Regular.woff2') format('woff2'); */
-  src: url('../fonts/proximanova/ProximaNova-Regular.woff2') format('woff2');
+  src: url('/assets/register_email_phone_cert/fonts/proximanova/ProximaNova-Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -53,8 +51,7 @@ body {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  /* src: url('/assets/certificate-3digits/fonts/proximanova/ProximaNova-Bold.woff2') format('woff2'); */
-  src: url('../fonts/proximanova/ProximaNova-Bold.woff2') format('woff2');
+  src: url('/assets/register_email_phone_cert/fonts/proximanova/ProximaNova-Bold.woff2') format('woff2');
 }
 
 body {
