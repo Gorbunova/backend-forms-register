@@ -67,7 +67,10 @@
       </div>
     </div>
 
-    <p class="timer_message" id="timer_wrapper" th:utext="#{label.form.code.again.in}">Send code again in <span id="timer">01:00</span></p>
+    <div class="timer_message" id="timer_wrapper">
+      <p th:utext="#{label.form.code.again.in}">Send code again in </p>
+      <span id="timer">01:00</span>
+    </div>
     <a class="again_code_link" id="again_code_link" th:utext="#{label.form.code.again}">Send code again</a>
 
     <div class="button_wrapper">

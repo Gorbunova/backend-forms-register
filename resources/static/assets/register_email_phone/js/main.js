@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
   const link = document.getElementById('again_code_link')
 
   link?.addEventListener('click', () => {
-    timerWrapper.style.display = 'inline'
+    timerWrapper.style.display = 'flex'
     link.style.display = 'none'
     startTimer(timerWrapper, timer, link)
   })
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
 const startTimer = (timerWrapper, timer, link) => {
   let counter = 60
-
+  timer.textContent = '01:00'
   const timerCounter = setInterval(() => {
     counter -= 1
     timer.textContent = `${counter === 60 ? '01' : '00'}:${counter < 10 ? '0' + counter : counter}`

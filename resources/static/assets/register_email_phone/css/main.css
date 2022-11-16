@@ -364,6 +364,16 @@ form, .wrapper {
   font-size: 13px;
   color: var(--muted-500);
   margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.timer_message p{
+  margin: 2px 0;
+}
+
+.timer_message span{
+  margin-left: 4px;
 }
 
 .again_code_link {
